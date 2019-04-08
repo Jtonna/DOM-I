@@ -75,7 +75,15 @@ topContentText[1].innerHTML = siteContent['main-content']['about-content'];
 
 /* #endregion */
 
-/* #region middle img */
+/* #region Middle img */
 let topContentMiddleImg = document.querySelector('.middle-img');
 topContentMiddleImg.src = siteContent['main-content']['middle-img-src'];
+/* #endregion */
+
+/* #region Top Content Bottom */
+let bottomCHeader = document.querySelectorAll('.bottom-content h4');
+bottomCHeader[0].innerHTML = siteContent['main-content']['services-h4'];
+bottomCHeader[1].innerHTML = siteContent['main-content']['product-h4'];
+bottomCHeader[2].innerHTML = siteContent['main-content']['vision-h4'];
+
 /* #endregion */
