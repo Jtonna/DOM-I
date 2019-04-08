@@ -37,6 +37,15 @@ const siteContent = {
   },
 };
 
+/* #region example  */
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute ('src', siteContent["nav"]["img-src"]);
+/* #endregion */
+
+// My Work
+const navList = document.querySelectorAll('nav a');
+
+for (let i = 0; i < navList.length; i++){
+  navList[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+}
