@@ -44,8 +44,20 @@ logo.setAttribute ('src', siteContent["nav"]["img-src"]);
 /* #endregion */
 
 // My Work
+
+/* #region  nav */
 const navList = document.querySelectorAll('nav a');
 
 for (let i = 0; i < navList.length; i++){
-  navList[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+  navList[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
+  navList[i].style.color = "green";
 }
+/* #endregion */
+
+const selectH1 = document.querySelector('.cta h1');
+const selectButton = document.querySelector('.cta button');
+const selectImg = document.querySelector('.cta img')
+
+selectH1.textContent = siteContent["cta"]["h1"];
+selectButton.textContent = siteContent["cta"]["button"];
+selectImg.src = siteContent["cta"]["img-src"];
