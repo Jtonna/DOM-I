@@ -39,7 +39,7 @@ const siteContent = {
 
 /* #region example  */
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute ('src', siteContent["nav"]["img-src"]);
 /* #endregion */
 
@@ -48,7 +48,7 @@ logo.setAttribute ('src', siteContent["nav"]["img-src"]);
 /* #region  nav */
 const navList = document.querySelectorAll('nav a');
 
-for (let i = 0; i < navList.length; i++){
+for (i = 0; i < navList.length; i++){
   navList[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
   navList[i].style.color = 'green';
 }
@@ -65,8 +65,8 @@ selectImg.src = siteContent['cta']['img-src'];
 /* #endregion */
 
 /* #region  Top Content Head */
-let topContentHead = document.querySelectorAll('.top-content h4');
-let topContentText = document.querySelectorAll('.top-content p');
+const topContentHead = document.querySelectorAll('.top-content h4');
+const topContentText = document.querySelectorAll('.top-content p');
 
 topContentHead[0].innerHTML = siteContent['main-content']['features-h4'];
 topContentText[0].innerHTML = siteContent['main-content']['features-content'];
@@ -76,14 +76,19 @@ topContentText[1].innerHTML = siteContent['main-content']['about-content'];
 /* #endregion */
 
 /* #region Middle img */
-let topContentMiddleImg = document.querySelector('.middle-img');
+const topContentMiddleImg = document.querySelector('.middle-img');
 topContentMiddleImg.src = siteContent['main-content']['middle-img-src'];
 /* #endregion */
 
 /* #region Top Content Bottom */
-let bottomCHeader = document.querySelectorAll('.bottom-content h4');
-bottomCHeader[0].innerHTML = siteContent['main-content']['services-h4'];
-bottomCHeader[1].innerHTML = siteContent['main-content']['product-h4'];
-bottomCHeader[2].innerHTML = siteContent['main-content']['vision-h4'];
+const bottomContentHeader = document.querySelectorAll('.bottom-content h4');
+const bottomContentText = document.querySelectorAll(".bottom-content p");
+
+bottomContentHeader[0].innerHTML = siteContent['main-content']['services-h4'];
+bottomContentText[0].innerHTML = siteContent["main-content"]["services-content"];
+bottomContentHeader[1].innerHTML = siteContent['main-content']['product-h4'];
+bottomContentText[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomContentHeader[2].innerHTML = siteContent['main-content']['vision-h4'];
+bottomContentText[2].innerHTML = siteContent["main-content"]["vision-content"];
 
 /* #endregion */
